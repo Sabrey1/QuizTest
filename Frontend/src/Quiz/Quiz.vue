@@ -1,7 +1,7 @@
 <template>
 <div class="fix-container">
     
-    <div class="contain border shadow-3 border-round">
+    <div class="contain border shadow-3 border-round p-3">
         <div class="flex">
             <Button @click="back" icon="pi pi-arrow-left" severity="secondary" text />
             <p>Back</p>
@@ -20,7 +20,7 @@
         <div>
             <p>What is the default value of 'position' in CSS?</p>
             <Card class="border-2 border-green-100 mb-2 card">
-                    <template #title>Easy</template>
+                    
                     <template #content>
                         <p class="m-0">
                            Basic CSS concept for beginners
@@ -28,7 +28,7 @@
                     </template>
             </Card>
             <Card class="border-2 border-green-100 mb-2 card">
-                    <template #title>Easy</template>
+                   
                     <template #content>
                         <p class="m-0">
                            Basic CSS concept for beginners
@@ -36,7 +36,6 @@
                     </template>
             </Card>
             <Card class="border-2 border-green-100 mb-2 card">
-                    <template #title>Easy</template>
                     <template #content>
                         <p class="m-0">
                            Basic CSS concept for beginners
@@ -44,13 +43,14 @@
                     </template>
             </Card>
             <Card class="border-2 border-green-100 mb-2 card">
-                    <template #title>Easy</template>
+        
                     <template #content>
                         <p class="m-0">
                            Basic CSS concept for beginners
                         </p>
                     </template>
             </Card>
+            <Button class="flex justify-content-end">Next</Button>
         </div>
     </div>
     
