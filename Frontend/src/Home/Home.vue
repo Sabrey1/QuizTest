@@ -6,7 +6,7 @@
             <p class="textHeader">Test your CSS knowledge. Choose your difficulty level to begin.</p>
         </div>
         <div class="contain">
-            <Card class="mb-2 border-2 border-green-100 card">
+            <Card @click="goToEasy" class="mb-2 border-2 border-green-100 card">
                     <template #title>Easy</template>
                     <template #content>
                         <p class="m-0">
@@ -35,7 +35,14 @@
      </div>
 </template>
 <script setup>
-    import Card from 'primevue/card';
+import Card from 'primevue/card';
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function goToEasy(){
+    router.push('/quiz')
+}
 </script>
 <style scoped>
 .card{

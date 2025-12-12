@@ -50,7 +50,7 @@
                         </p>
                     </template>
             </Card>
-            <Button class="flex justify-content-end">Next</Button>
+            <Button class="flex justify-content-end" @click="next">Next</Button>
         </div>
     </div>
     
@@ -63,6 +63,13 @@ import ProgressBar from 'primevue/progressbar';
 import 'primeicons/primeicons.css'
 import Button from "primevue/button";
 import Card from 'primevue/card';
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function next(){
+    router.push('/result')
+}
 </script>
 
 <style scoped>
