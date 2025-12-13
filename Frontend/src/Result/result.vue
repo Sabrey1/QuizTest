@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <div class="fix-container">
-        <Card class="shadow bg-white">
+    <div class="flex justify-content-center align-items-center h-screen">
+        <div class="fix-container container">
+        <Card class="shadow bg-white ">
                     <template #content>
                         <p class="text-center p-0 mb-0">
                             <i class="pi pi-trophy p-5 text-3xl border-circle color-green text-green-500 text-center bg-green-100"></i>
@@ -36,7 +36,7 @@
                         <div class="mt-4 flex justify-content-center">
                         <Button 
                             icon="pi pi-refresh" 
-                            class="w-2 flex justify-center gap-2 items-center" 
+                            class="  flex justify-center gap-2 items-center btnTryAgain" 
                             @click="next"
                             label="Try Again"
                             >
@@ -57,4 +57,10 @@ import Button from "primevue/button";
 
 <style scoped>
    
+   @media screen and (max-width: 768px) {
+        .container{
+            padding: 1rem;
+        }
+       
+    }
 </style>

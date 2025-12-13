@@ -1,42 +1,48 @@
 <template>
     <div class="bg-gray-200 h-screen p-0">   
-    <div class="fix-container">
-        <div class="header text-center">
-            <h1 class="mt-0 pt-4">CSS Quiz</h1>
-            <p class="textHeader">Test your CSS knowledge. Choose your difficulty level to begin.</p>
+        <div class="flex justify-content-center align-items-center h-screen">
+            <div class="fix-container bg-white p-3 border-round">
+                <AppBar class="border-none">
+                    <h2>Back</h2>
+                </AppBar>
+                <div class="header text-center">
+                    <h1 class="mt-0 pt-4">CSS Quiz</h1>
+                    <p class="textHeader">Test your CSS knowledge. Choose your difficulty level to begin.</p>
+                </div>
+                <div class="contain">
+                    <Card @click="goToEasy" class="mb-2 border-2 border-green-100 card">
+                            <template #title>Easy</template>
+                            <template #content>
+                                <p class="m-0">
+                                Basic CSS concept for beginners
+                                </p>
+                            </template>
+                    </Card>
+                    <Card class="mb-2 border-2 border-green-100 card">
+                            <template #title>Medium</template>
+                            <template #content>
+                                <p class="m-0">
+                                    FlexBox, Grid & Box Model
+                                </p>
+                            </template>
+                    </Card>
+                    <Card class="mb-2 border-2 border-green-100 card">
+                            <template #title>Hard</template>
+                            <template #content>
+                                <p class="m-0">
+                                    Advanced CSS techniques
+                                </p>
+                            </template>
+                    </Card>
+                </div>
+            </div>
         </div>
-        <div class="contain">
-            <Card @click="goToEasy" class="mb-2 border-2 border-green-100 card">
-                    <template #title>Easy</template>
-                    <template #content>
-                        <p class="m-0">
-                           Basic CSS concept for beginners
-                        </p>
-                    </template>
-            </Card>
-            <Card class="mb-2 border-2 border-green-100 card">
-                    <template #title>Medium</template>
-                    <template #content>
-                        <p class="m-0">
-                            FlexBox, Grid & Box Model
-                        </p>
-                    </template>
-            </Card>
-            <Card class="mb-2 border-2 border-green-100 card">
-                    <template #title>Hard</template>
-                    <template #content>
-                        <p class="m-0">
-                            Advanced CSS techniques
-                        </p>
-                    </template>
-            </Card>
-        </div>
-    </div>
      </div>
 </template>
 <script setup>
 import Card from 'primevue/card';
 import { useRouter } from 'vue-router'
+import 'primeicons/primeicons.css'
 
 const router = useRouter()
 
@@ -50,6 +56,7 @@ function goToEasy(){
     transition: all 0.3s ease-in-out;
 }
 .card:hover{
+     background-color: rgb(148, 243, 243);
     transform: scale(1.02);
     border: green 2px solid!important;
     

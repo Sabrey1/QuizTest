@@ -1,12 +1,13 @@
 <template>
-  <Toolbar class="block lg:hidden flex pl-0">
+  <!-- <Toolbar class="block lg:hidden flex pl-0"> -->
+  <Toolbar>
     <template #start>
       <Button @click="back" icon="pi pi-arrow-left" severity="secondary" text />
       <slot></slot>
     </template>
     
     <template #end>
-      <ComUserProfileAvatar />
+      <!-- <ComUserProfileAvatar /> -->
     </template>
   </Toolbar>
   <!-- <slot name="right"></slot> -->

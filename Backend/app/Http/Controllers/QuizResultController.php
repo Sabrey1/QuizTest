@@ -12,7 +12,8 @@ class QuizResultController extends Controller
      */
     public function index()
     {
-        //
+        $quizResult = QuizResult::all();
+        return response()->json($quizResult);
     }
 
     /**
