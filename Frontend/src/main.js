@@ -7,7 +7,7 @@ import router from './router'
 import i18n from './i18n'
 import AppBar from '@/Layout/AppBar.vue'
 import ToolBar from '@/Layout/ToolBar.vue'
-
+import api from './services/api';
 
 const app = createApp(App);
 app.use(PrimeVue, {
@@ -17,6 +17,9 @@ app.use(PrimeVue, {
 });
 app.use(router)
 app.use(i18n)
+
+
+app.config.globalProperties.$api = api;
 
 app.component("AppBar", AppBar) 
 app.component("ToolBar", ToolBar);
